@@ -7,5 +7,7 @@
   facebook?: string;
   twitter?: string;
   tublr?: string;
+  instagram?: string;
   equipo_trabajo?: any[];
+  
 }

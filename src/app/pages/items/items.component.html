@@ -1,5 +1,8 @@
 <section *ngIf="producto">
-    <header class="rk-portfolio-cover  item-inside-1">
+
+
+    <header  [ngStyle]="{'background-image': 'url(assets/productos/'+id+'/main.jpg)'}"
+               class="rk-portfolio-cover  item-inside-1 " >
       <div class="item-inside__meta">
         <h1 class="ae-u-bolder rk-portfolio-title ">{{ producto.producto}}</h1>
         <p class="ae-theta rk-portfolio-category ">{{ producto.categoria}}</p>
@@ -28,15 +31,20 @@
       <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
         <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
           <h4 class="ae-u-bolder">{{producto.subtitulo2}}</h4>
-          <p class="ae-eta">{{producto.desc1}}</p>
+          <p class="texAlign">{{producto.desc1}}</p>
         </div>
 
         <div class="ae-grid__item item-lg-6 item-lg--offset-1">
-          <img src="assets/productos/{{id}}/pic-1.jpg" alt="vestido" class="controlImagen" ></div>
+          <img src="assets/productos/{{id}}/pic-1.jpg" alt="imagen" class="controlImagen" >
+        </div>
+
       </div>
+
       <div class="ae-grid ae-grid--collapse">
+
         <div class="ae-grid__item item-lg-8">
-          <img  src="assets/productos/{{id}}/pic-2.jpg" alt="vestido" class="controlImagen"></div>
+          <img  src="assets/productos/{{id}}/pic-2.jpg" alt="imagen" class="controlImagen">
+        </div>
         <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
          
           <h4 class="texAlign">{{producto.tituloH4}}</h4>
@@ -44,6 +52,17 @@
         </div>
       </div>
 
+      <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+        <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
+          <h4 class="ae-u-bolder">{{producto.titulo2H4}}</h4>
+          <p class="texAlign">{{producto.desc3}}</p>
+        </div>
+
+        <div class="ae-grid__item item-lg-6 item-lg--offset-1">
+          <img src="assets/productos/{{id}}/pic-3.jpg" alt="imagen" class="controlImagen" >
+        </div>
+
+      </div>
       
     </div>
     <div class="ae-container-fluid au-pt-4 au-pb-4">

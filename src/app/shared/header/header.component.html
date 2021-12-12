@@ -22,7 +22,8 @@
 
           <li routerLinkActive="active" class="rk-menu__item"><a routerLink="home" class="rk-menu__link">Home</a>
           </li>
-          <li class="rk-menu__item"><a href="#0" class="rk-menu__link">Pages</a>
+          <li class="rk-menu__item">
+            <a href="#0" class="rk-menu__link">Pages</a>
             <nav class="rk-menu__sub">
               <ul class="rk-container">
                 <li class="rk-menu__item"><a routerLink="about" class="rk-menu__link">About</a></li>
@@ -35,14 +36,20 @@
             <a href="http://pixeden.com" target="_blanck" class="rk-menu__link">Diseño<sup>T</sup></a>
           </li>
         </ul>
-        <form class="rk-search">
-          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+
+
+        <div class="rk-search">
+          <input type="text" 
+          (keyup.enter)="buscarProducto(txtBuscar.value)"
+          placeholder="Buscar..." 
+          id="urku-search" 
+          class="rk-search-field" #txtBuscar>
           <label for="urku-search">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-search"></use>
             </svg>
           </label>
-        </form>
+        </div>
       </nav>
     </div>
   </header>
